@@ -21,16 +21,25 @@ body {
 
 /* Header styles */
 header {
-  background-color: #ff3f6c ;
+  background-color: #ff3f6c;
   color: white;
   padding: 20px 0;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 header h1 {
   margin: 0;
   font-size: 2rem;
+}
+
+header .logo {
+  position: absolute;
+  bottom: -85px;
+  left: 10px;
+  width: 200px;
+  height: 200px;
 }
 
 /* Catalog and Try-On styles */
@@ -62,9 +71,15 @@ header h1 {
 .try-on-view {
   margin-top: 20px;
   padding: 20px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.try-on-view.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .try-on-view h2 {
@@ -234,4 +249,3 @@ a-marker {
 .camera-toggle-button:focus {
   outline: none;
 }
-
