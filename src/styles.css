@@ -1,0 +1,237 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('components/wardrobe.avif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+header {
+  background-color: #ff3f6c ;
+  color: white;
+  padding: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Catalog and Try-On styles */
+.catalog {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.catalog > div {
+  cursor: pointer;
+  text-align: center;
+}
+
+.catalog img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.catalog img:hover {
+  transform: scale(1.05);
+}
+
+.try-on-view {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.try-on-view h2 {
+  font-size: 1.5rem;
+  color: #ff3f6c;
+}
+
+/* Clothing list styles */
+.clothing-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.clothing-item {
+  cursor: pointer;
+  text-align: center;
+}
+
+.clothing-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.clothing-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Wardrobe styles */
+.wardrobe {
+  margin-top: 20px;
+}
+
+.wardrobe h2 {
+  font-size: 1.5rem;
+  color: #ff3f6c;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.wardrobe-item {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.wardrobe-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.wardrobe-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Virtual Try-On styles */
+a-scene {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a-marker {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* UserProfile styles */
+.user-profile {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile h2 {
+  font-size: 1.5rem;
+  color: #ff3f6c;
+  margin-bottom: 10px;
+}
+
+.user-profile p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ContinueButton styles */
+.continue-button {
+  background-color: #ff3f6c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  display: block;
+  margin: 20px auto;
+}
+
+.continue-button:hover {
+  background-color: #e7335d;
+}
+
+.continue-button:focus {
+  outline: none;
+}
+
+/* VideoStream styles */
+.video-stream {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-stream img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .catalog {
+    flex-direction: column;
+  }
+}
+
+.camera-toggle-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  display: block;
+  margin: 20px auto;
+}
+
+.camera-toggle-button:hover {
+  background-color: #0056b3;
+}
+
+.camera-toggle-button:focus {
+  outline: none;
+}
+
